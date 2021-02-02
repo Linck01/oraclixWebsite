@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+  zorahwebsitedev:
+    container_name: zorahWebsiteDev
+    restart: always
+    build: .
+    volumes:
+      - ./src:/usr/src/app
+      #- /usr/src/app/node_modules
+    command: npm run developmentNodemon
+    ports:
+      - "3007:3007"

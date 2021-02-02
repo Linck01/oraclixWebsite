@@ -1,0 +1,41 @@
+<%
+var title = 'Faq';
+var metaDescription = 'Frequently asked questions for ActivityRank Bot.';
+var keywords = 'premium,support,pricing,features,info';
+%>
+
+<% include partials/header %>
+
+<!-- page content -->
+<div class="right_col" role="main">
+  <div class="row">
+    <% for (faq of faqs) { %>
+      <div class="col-md-12 col-sm-12 ">
+        <div class="x_panel" style="height: auto;">
+          <a class="collapse-link" style="cursor:pointer;">
+            <div class="x_title">
+              <h2><i class="fa fa-align-left"></i> &nbsp;<strong>(<%= faq.id %>)</strong> <%= faq.title %></h2>
+
+              <ul class="nav navbar-right panel_toolbox" style="min-width:20px;">
+                <li>
+                  <i class="fa fa-chevron-down"></i>
+                </li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+          </a>
+
+          <div class="x_content" style="display: none;">
+            <span><%= faq.desc %></span><br />
+          </div>
+        </div>
+      </div>
+      <%
+    } %>
+  </div>
+</div>
+<!-- /page content -->
+
+
+
+<% include partials/footer %>
