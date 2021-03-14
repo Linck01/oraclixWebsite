@@ -27,3 +27,9 @@ exports.privacyPolicy = (req, res, next) => {
 exports.termsAndConditions = (req, res, next) => {
   res.render('termsAndConditions',{shardStats: textModel.shardStats,termsAndConditions: textModel.termsAndConditions});
 }
+exports.question = (req, res, next) => {
+  res.render('question');
+}
+exports.newQuestion = (req, res, next) => {
+  res.render('newQuestion');
+}

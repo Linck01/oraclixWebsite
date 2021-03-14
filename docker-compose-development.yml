@@ -1,7 +1,7 @@
 version: '3.3'
 services:
-  zorahwebsitedev:
-    container_name: zorahWebsiteDev
+  zoraclewebsitedev:
+    container_name: zoracleWebsiteDev
     restart: always
     build: .
     volumes:

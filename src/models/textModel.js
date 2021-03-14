@@ -1,10 +1,10 @@
-const managerDb = require('./managerDb.js');
+const db = require('./db.js');
 const requireFromString = require('require-from-string');
 
 exports.updateTexts = () => {
   return new Promise(async function (resolve, reject) {
     try {
-      const textsObj = await managerDb.fetch(null,'/api/texts','get');
+      const textsObj = await db.fetch(null,'/api/texts','get');
       for (key in textsObj)
         exports[key] = textsObj[key];
 

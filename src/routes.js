@@ -16,8 +16,11 @@ router.route('/support').get(viewController.support);
 router.route('/privacypolicy').get(viewController.privacyPolicy);
 router.route('/termsandconditions').get(viewController.termsAndConditions);
 
-// Paypal
+router.route('/question/:url').get(viewController.question);
+router.route('/question/id/:id').get(viewController.question);
+router.route('/newquestion/').get(viewController.newQuestion);
 
+// Paypal
 router.route('/api/paypal/order/create/').post(paypalController.createOrder);
 router.route('/api/paypal/order/capture/').post(paypalController.captureOrder);
 

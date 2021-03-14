@@ -2,7 +2,7 @@ const fct = require('../util/fct.js');
 const config = require('../const/config.js');
 const paypal = require('@paypal/checkout-server-sdk');
 const payPalClient = require('../util/paypalClient.js');
-const managerDb = require('../models/managerDb.js');
+const db = require('../models/db.js');
 
 exports.createOrder = async (req, res, next) => {
   try {

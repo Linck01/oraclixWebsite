@@ -1,25 +1,15 @@
 const keys = {
   production: {
-    managerApiAuth: '',
-    managerHost: '',
-    managerDb: {
-      dbUser: '',
-      dbPassword: '',
-      dbName: ''
-    },
+    dbApiHost: '',
+    dbApiAuth: '',
     paypal: {
       clientId: '',
       secret: ''
     }
   },
   development: {
-    managerApiAuth: '',
-    managerHost: '',
-    managerDb: {
-      dbUser: '',
-      dbPassword: '',
-      dbName: ''
-    },
+    dbApiHost: '',
+    dbApiAuth: '',
     paypal: {
       clientId: '',
       secret: ''

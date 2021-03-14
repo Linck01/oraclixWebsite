@@ -1,0 +1,10 @@
+
+#developerBox {
+  background-color: #000a14;
+  opacity:0.69;
+}
+
+#developerBox .media-left {
+  width:40%;
+  margin-right:20px;
+}

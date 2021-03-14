@@ -1,0 +1,59 @@
+<%
+var title = 'Create and ask a question to the cosmos, universe or galaxy.';
+var metaDescription = 'Ask the universe something and it will respond. Are you ready to accept your fate?';
+var keywords = 'ask,question,new,universe,galaxy,cosmos,fate,fortuna';
+%>
+<% include partials/header %>
+
+<link rel="stylesheet" href="/css/newquestion.css">
+
+<div class="container">
+  <div class="row" style="height:85vh;">
+    <div class="col-md-8 my-auto mx-auto">
+      <h1 class="text-white text-center">Send a new question to the universe.</h1>
+      <br /><br />
+      <div id="newFeedForm"><!-- actually form -->
+        <fieldset>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-12">
+                <label>Whats your question?</label>
+                <input name="name" type="name" class="form-control">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-6">
+                <label>How many answers do you wish to get?</label>
+                <input name="password" type="password" class="form-control">
+              </div>
+              <div class="col-sm-6">
+                <label>Which Category does your question fit in?</label>
+                <input name="passwordVerify" type="password" class="form-control">
+              </div>
+            </div>
+          </div>
+          <!--div style="margin-top:25px;margin-bottom:10px;" align="center" class="g-recaptcha" data-sitekey="6LdxmGgUAAAAAJmH8pu35NzcFJpQBUGt6oIxgb63"></div-->
+          <div class="custom-control custom-checkbox mb-3 text-center">
+            <input required type="checkbox" class="custom-control-input" id="customCheck2">
+            <label class="custom-control-label" for="customCheck2">Accept <a href="/termsandconditions">Terms and Conditions</a></label>
+          </div>
+          <div class="text-center">
+            <button id="newFeedSubmit" style="width:80%;" class="btn btn-lg btn-success" onclick="showAlertbox('warning','The web interface is not ready yet! Please use our fully working discord bot for now.');">Give me answers!</button>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br /><br/>
+<div class="container">
+  <div class="text-muted text-center" style="font-size:1.2em;">
+    <i>  Please send us feedback, questions, bug reports and ideas per telegram or email. </i>
+  </div>
+</div>
+<br/><br/>
+
+<% include partials/footer %>
