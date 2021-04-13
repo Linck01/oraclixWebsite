@@ -1,12 +1,29 @@
 const db = require('./db.js');
-const requireFromString = require('require-from-string');
+const config = require('../const/config.js');
 
 exports.updateTexts = () => {
   return new Promise(async function (resolve, reject) {
     try {
-      const textsObj = await db.fetch(null,'/api/texts','get');
+      const res = await db.fetch(null,'/api/misc/texts/','get');
+
+      let textsObj;
+      if (res.error)
+        return reject(res.error);
+      else
+        textsObj = res.results;
+
       for (key in textsObj)
         exports[key] = textsObj[key];
+
+      let cmd,command,tmp;
+
+      for (cmd in exports.discord.commands){
+        command = exports.discord.commands[cmd];
+        for (tmp in command.command)
+          command.command[tmp] = '??' + command.command[tmp];
+        for (tmp in command.example)
+          command.example[tmp] = '??' + command.example[tmp];
+      }
 
       resolve();
     } catch (e) { return reject(e); }

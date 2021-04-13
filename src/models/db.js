@@ -25,13 +25,9 @@ exports.fetch = (body,route,method) => {
       res = await fetch(keys.dbApiHost + route, requestObject);
       //console.log(res);
       res = await res.json();
-      if (res.error != null)
-        return reject('Remote DB Error: ' + res.error);
 
-      if(res.results)
-        resolve(res.results);
-      else
-        resolve(res);
-    } catch (e) { reject('Fetch Error in backup.api.call(): ' + e); }
+      resolve(res);
+
+    } catch (e) { reject('Fetch Error: ' + e); }
   });
 }

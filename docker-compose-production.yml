@@ -1,7 +1,7 @@
 version: '3.3'
 services:
-  zoraclewebsite:
-    container_name: zoracleWebsite
+  oraclixwebsite:
+    container_name: oraclixWebsite
     restart: always
     build: .
     volumes:

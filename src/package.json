@@ -1,7 +1,7 @@
 {
-  "name": "activityRankWebsite",
+  "name": "oraclixWebsite",
   "version": "4.0.0",
-  "description": "ActivityRank Website",
+  "description": "Oraclix Website",
   "main": "app.js",
   "scripts": {
     "production": "NODE_ENV=production node ./app",
@@ -12,7 +12,7 @@
     "nodemon": "*",
     "express": "*",
     "node-cron": "*",
-    "promise-mysql": "*", 
+    "promise-mysql": "*",
     "ejs": "*",
     "node-fetch": "*",
     "request": "*",

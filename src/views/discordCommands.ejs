@@ -1,0 +1,58 @@
+<%
+var title = 'Oraclix Discord Bot Commands';
+var metaDescription = 'Commands for Oraclix Discord Bot.';
+var keywords = 'discord, bot, discord bot, commands, bot commands, discord commands';
+%>
+
+
+<% include partials/header %>
+<!--script src="/js/buy.js"></script-->
+<link rel="stylesheet" href="/css/termsandconditions.css">
+<style>
+.list-group {
+  margin-left:2rem;
+}
+</style>
+
+
+<br />
+<div class="container">
+
+  <br />
+  <div class="row justify-content-center">
+  	<div class="col-lg-5">
+      <h1 class="text-center" style="color:white;">Commands</h1>
+      <h5 class="text-center"><small >Default Prefix: <b><%= config.defaultPrefix %></b></small></h5>
+    </div>
+  </div>
+  <br /><br/>
+  <div class="row justify-content-center">
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Command</th>
+      <th scope="col">Description</th>
+      <th scope="col">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%
+      let command;
+      for (let term in texts.discord.commands) {
+        command = texts.discord.commands[term]; %>
+
+      <tr>
+        <th scope="row"><%= command.command.join(' , ') %></th>
+        <td><%= command.title %> - <small><%= command.desc %></small></td>
+        <td><%= command.example.join(', ') %></td>
+      </tr>
+      <% } %>
+  </tbody>
+</table>
+
+  </div>
+  <br /><br/>
+</div>
+
+
+<% include partials/footer %>

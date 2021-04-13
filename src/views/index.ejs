@@ -1,7 +1,7 @@
 <%
-var title = 'Ask the Universe - Seek and find answers and signs from the Universe and Cosmos.';
-var metaDescription = 'Manage, filter, organize your push notifications for mobile and desktop. Make push notifications interesting and useful by filtering your favorite social media channels.';
-var keywords = 'push notification, filter, interesting, useful, deactivate, disable, turn off, deinstall';
+var title = 'Oraclix - Ask the Oracle whatever you want!';
+var metaDescription = 'Ask a question to the Oracle and get a fast answer. In turn, you will have to answer questions from the Oracle to stay in it\'s favor.';
+var keywords = 'oracle,answers,questions,oraclix,coin,toss,42';
 %>
 
 <% include partials/header %>
@@ -12,10 +12,11 @@ var keywords = 'push notification, filter, interesting, useful, deactivate, disa
 <div class="container" id="indexHeader">
   <div class="row justify-content-center" style="min-height:85vh;">
     <div class="col-lg-6 my-auto text-center">
-      <h1 class="text-center text-white"><small>Have a question? Unsure about a decision?</small><br /> <b><i>Ask the Universe!</i></b></h1>
-      <h4 class="text-muted text-center">Send your questions to the universe and expect a <b><i>fast but unpredictable response</i></b> from real characters. <br /><br />In return, you have to give back the same - become a <b><i>character of the universe</i></b> yourself and answer it's questions.</h4>
+      <h1 class="text-center text-white"><small>Have a question?</small><br /> <b>Ask <i class="text-warning"> Oraclix</i>!</b></h1>
+      <h4 class=" text-center text-muted">And get a <b><i>fast and unpredictable response</i></b>.</h4>
       <br />
-      <a href="https://discordapp.com/oauth2/authorize?client_id=534589798267224065&permissions=2114448593&scope=bot" target="_blank" style="width:50%;" class="btn btn-lg btn-success">Invite Bot</a>
+      <a href="<%= config.discordBotInvite %>" target="_blank" style="width:40%;" class="btn btn-lg btn-warning">Invite Discord Bot</a>
+      <a href="/discordCommands" style="width:40%;" class="btn btn-lg btn-warning">Show Commands</a>
     </div>
   </div>
 </div>
@@ -24,19 +25,19 @@ var keywords = 'push notification, filter, interesting, useful, deactivate, disa
 <div id="useCaseBox">
   <br /><br /><br />
   <div class="container">
-    <h1 class="text-white text-center">How to use?</h1>
+    <h1 class="text-white text-center">How to use</h1>
     <br /><br />
     <div class="row">
       <div class="col-md-6">
         <div class="media">
           <span class="media-left">
-            <img src="/img/index/discord.png" style="width:100%;">
+            <img src="/img/index/discord.png" style="width:80%;">
           </span>
           <div class="media-body my-auto">
 
-            <h5 class="text-white">Discord Bot</h5>
+            <h5 class="text-warning">Discord Bot</h5>
             <p class="text-muted">
-                Use our discord bot to connect you and your questions to the universe. Send your question in a server or per direct message and receive the answers back right there, as soon as they are ready.
+                Use the discord bot to send your questions to the Oracle. Invite the bot to your server and use the '???' command to start getting answers right away.
             </p>
           </div>
         </div>
@@ -44,104 +45,95 @@ var keywords = 'push notification, filter, interesting, useful, deactivate, disa
       <div class="col-md-6">
         <div class="media">
           <span class="media-left">
-            <img src="/img/index/world.png" style="width:100%;">
+            <img src="/img/index/world.png" style="width:80%;">
           </span>
           <div class="media-body my-auto">
-            <h5 class="text-white">Web - Coming soon!</h5>
+            <h5 class="text-warning">Web - Coming soon!</h5>
             <p class="text-muted">
-                You will soon be able to also use our webclient to interact with the universe. Login, ask, answer and view questions directly through your browser. Discord Bot and Webclient connect to the same universe. </p>
+                You will soon be able to also use our web client to interact with the Oracle. Login, ask, answer and view questions directly through your browser. </p>
           </div>
         </div>
       </div>
     </div>
-    <br /><br /><br /><br /><br />
+    <br />
   </div>
 </div>
-<div id="supportedBox">
-  <div class="container-fluid">
+
+<div id="useCaseBox">
+  <br /><br /><br />
+  <div class="container">
+    <h1 class="text-white text-center">How it works</h1>
+    <br /><br />
     <div class="row">
-
-      <div class=" col-lg-6 col-md-8 col-sm-12 py-5 mx-auto">
-        <div class="container">
-          <h1 class="text-center text-dark">How the universe works.</h1>
-          <h5 class="text-center text-dark">You give and take.</h5>
-          <br />
-          <div class="row justify-content-center">
-            <div class="col-1"></div>
-            <div class="col-2">
-              <i style="color:#1da1f2;font-size:3em;" class="fas fa-universal-access"></i>
-            </div>
-            <div class="col-5">
-              <h5 class="text-dark">Be part of the universe.</h5>
-              <p class="text-muted">
-                You have to answer questions in order to ask new question. This way you help the universe with all its questions.<br /><br />
-              </p>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-1"></div>
-            <div class="col-2">
-              <i style="color:#ff4500;font-size:3em;" class="fas fa-reply-all"></i>
-            </div>
-            <div class="col-5">
-              <h5 class="text-dark">Expect a fast response from the universe.</h5>
-              <p class="text-muted">
-                Because the whole universe focuses on answering the least recent questions, your question will be answered fast and in forseeable time.<br /><br />
-              </p>
-            </div>
+      <div class="col-md-6">
+        <div class="media">
+          <span class="media-left text-center">
+            <i style="font-size:6em;" class="text-info fas fa-sync-alt"></i>
+          </span>
+          <div class="media-body my-auto">
+            <h5 class="text-warning">Ask and answer</h5>
+            <p class="text-muted">
+              You send your question to Oraclix and will receive back an answer. In turn, you have to also answer it's questions.
+            </p>
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-12 col-sm-12 px-0 py-5" id="supportedBoxPic">
-        <!--img class="mt-auto mb-auto" src="img/app-promo/iphone-app-screenshot.png" alt="App Screenshot - Shards App Promo Demo Page"-->
-      </div>
-    </div>
-  </div>
-</div>
+      <div class="col-md-6">
+        <div class="media">
+          <span class="media-left text-center">
+            <i style="font-size:6em;" class="text-success fas fa-dice"></i>
+          </span>
+          <div class="media-body my-auto">
 
-
-
-<div id="howToBox">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-4 col-md-12 col-sm-12 px-0 py-5" id="howToBoxPic">
-        <!--img class="mt-auto mb-auto" src="img/app-promo/iphone-app-screenshot.png" alt="App Screenshot - Shards App Promo Demo Page"-->
-      </div>
-
-      <!-- App Features Wrapper -->
-      <div class=" col-lg-6 col-md-8 col-sm-12 py-5 mx-auto">
-        <div class="container">
-          <h1 class="text-center text-dark">How the universe decides.</h1>
-          <h5 class="text-center text-dark">It is unpredictable.</h5>
-          <br />
-          <div class="row justify-content-center">
-            <div class="col-1"></div>
-            <div class="col-2">
-              <i style="font-size:2.7em;color:#4587F3;" class="fas fa-dice"></i>
-            </div>
-            <div class="col-5">
-              <h5 class="text-dark">Random connections</h5>
-              <p class="text-muted">
-                You will receive questions from anyone and have your questions answered by anyone.
-              </p>
-            </div>
+            <h5 class="text-warning">Random and anoymous</h5>
+            <p class="text-muted">
+                What question or answers you will get is completely random and all of them are masked by an id.
+            </p>
           </div>
-          <div class="row justify-content-center">
-            <div class="col-1"></div>
-            <div class="col-2">
-              <i style="font-size:2.7em;color:#e66000;" class="fas fa-sync-alt"></i>
-            </div>
-            <div class="col-5">
-              <h5 class="text-dark">Changing toll</h5>
-              <p class="text-muted">
-                The toll you have to pay to ask a question to the universe is constantly changing, dependng on how busy the universe is (how many open questions there currently are).
-              </p>
-            </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="media">
+          <span class="media-left text-center">
+            <i style="font-size:6em;" class="fas fa-coins text-warning"></i>
+          </span>
+          <div class="media-body my-auto">
+
+            <h5 class="text-warning">Favor</h5>
+            <p class="text-muted">
+                Asking a question costs you <b>favor</b>. To gain <b>favor</b> you have to answer a question.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="media">
+          <span class="media-left text-center">
+            <i style="font-size:6em;" class="fas fa-flag text-danger"></i>
+          </span>
+          <div class="media-body my-auto">
+
+            <h5 class="text-warning">Report</h5>
+            <p class="text-muted">
+              You can report questions and answers that are against ToS or answers that are unrelated to the question.
+            </p>
           </div>
         </div>
       </div>
     </div>
+
+  </div>
+    <br /><br /><br />
   </div>
 </div>
+
+<br /> <br />
+<div class="text-center">
+<p><cite title="Source Title">The Oracle has spoken.</cite></p>
+<small></small>
+<br />
+</div>
+
+
 
 <% include partials/footer %>

@@ -1,0 +1,39 @@
+<%
+var title = 'Create and ask a question to the cosmos, universe or galaxy.';
+var metaDescription = 'Ask the universe something and it will respond. Are you ready to accept your fate?';
+var keywords = 'ask,question,new,universe,galaxy,cosmos,fate,fortuna';
+%>
+<% include partials/header %>
+
+<link rel="stylesheet" href="/css/question.css">
+
+<div class="container">
+  <div class="row" style="height:85vh;">
+    <div class="col-md-8 my-auto mx-auto">
+      <% if (!question) { %>
+        <h1 class="text-white text-center">Question not found!</h1>
+      <% } else { %>
+        <h1 class="text-warning text-center">Question</h1>
+        <h2 class="text-white text-center">[<%= question.id %>] <%= question.text %></h2>
+        <br />
+        <h1 class="text-warning text-center">Answers</h1>
+
+        <% if (!question.answers || question.answers.length == 0) { %>
+          <div id="newFeedForm"><!-- actually form -->
+            <label>No answers yet.</label>
+          </div>
+        <% } %>
+        <% for (let answer of question.answers) { %>
+          <div id="newFeedForm"><!-- actually form -->
+            <label>[<%= answer.id %>] <%= answer.text %></label>
+          </div>
+        <% } %>
+      <% } %>
+
+    </div>
+  </div>
+</div>
+
+<br /><br/>
+
+<% include partials/footer %>
