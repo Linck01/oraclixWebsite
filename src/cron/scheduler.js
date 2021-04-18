@@ -1,14 +1,14 @@
 const cron = require('node-cron');
-const textModel = require('../models/textModel.js');
+const utilModel = require('../models/utilModel.js');
 
 exports.start = (manager) => {
   return new Promise(async function (resolve, reject) {
     try {
-      await textModel.updateTexts();
+      await utilModel.updateTexts();
 
       cron.schedule('0 0 * * * *', async function() {
         try {
-          await textModel.updateTexts();
+          await utilModel.updateTexts();
         } catch (e) { console.log(e); }
       });
 

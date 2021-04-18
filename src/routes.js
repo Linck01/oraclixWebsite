@@ -8,7 +8,6 @@ const path = require('path');
 router.route('/').get(viewController.index);
 router.route('/index').get(viewController.index);
 router.route('/discordCommands').get(viewController.discordCommands);
-router.route('/patchnotes').get(viewController.patchnotes);
 router.route('/about').get(viewController.about);
 router.route('/faq').get(viewController.faq);
 router.route('/support').get(viewController.support);

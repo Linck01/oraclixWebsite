@@ -1,10 +1,11 @@
 const db = require('./db.js');
 const config = require('../const/config.js');
+exports.texts = {};
 
 exports.updateTexts = () => {
   return new Promise(async function (resolve, reject) {
     try {
-      const res = await db.fetch(null,'/api/misc/texts/','get');
+      const res = await db.fetch(null,'/api/util/texts/','get');
 
       let textsObj;
       if (res.error)
@@ -13,12 +14,12 @@ exports.updateTexts = () => {
         textsObj = res.results;
 
       for (key in textsObj)
-        exports[key] = textsObj[key];
+        exports.texts[key] = textsObj[key];
 
       let cmd,command,tmp;
 
-      for (cmd in exports.discord.commands){
-        command = exports.discord.commands[cmd];
+      for (cmd in exports.texts.discord.commands){
+        command = exports.texts.discord.commands[cmd];
         for (tmp in command.command)
           command.command[tmp] = '??' + command.command[tmp];
         for (tmp in command.example)
